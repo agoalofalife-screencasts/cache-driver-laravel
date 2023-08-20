@@ -79,7 +79,11 @@ return [
             'connection' => 'cache',
             'lock_connection' => 'default',
         ],
-
+        'bigcache' => [
+            'driver' => 'bigcache',
+            'host' => env('BIGCACHE_HOST', ''),
+            'port' => env('BIGCACHE_PORT', '9090'),
+        ],
         'dynamodb' => [
             'driver' => 'dynamodb',
             'key' => env('AWS_ACCESS_KEY_ID'),
